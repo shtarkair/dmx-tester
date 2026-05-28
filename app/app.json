@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "DMX Tester",
+    "slug": "dmx-tester",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.dmxtester.app",
+      "requireFullScreen": false,
+      "infoPlist": {
+        "UISupportedInterfaceOrientations": [
+          "UIInterfaceOrientationPortrait",
+          "UIInterfaceOrientationLandscapeLeft",
+          "UIInterfaceOrientationLandscapeRight"
+        ],
+        "NSLocalNetworkUsageDescription": "DMX Tester connects to the bridge server on your local network."
+      }
+    },
+    "android": {
+      "package": "com.dmxtester.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": ["INTERNET", "ACCESS_NETWORK_STATE"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "output": "spa",
+      "shortName": "DMX",
+      "themeColor": "#000000",
+      "backgroundColor": "#000000",
+      "meta": {
+        "apple-mobile-web-app-capable": "yes",
+        "apple-mobile-web-app-status-bar-style": "black-translucent",
+        "apple-mobile-web-app-title": "DMX"
+      }
+    },
+    "plugins": ["expo-screen-orientation"]
+  }
+}

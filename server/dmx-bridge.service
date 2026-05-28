@@ -1,0 +1,24 @@
+[Unit]
+Description=DMX Tester Bridge (WebSocket → Art-Net/sACN)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=shtarkair
+WorkingDirectory=/home/shtarkair/dmx-tester/server
+ExecStart=/usr/bin/node index.js
+Restart=always
+RestartSec=5
+
+# Network interface for DMX output (eth0 IP on the lighting network)
+Environment=BIND_ADDR=2.0.0.10
+Environment=PORT=8080
+
+# Log to journald — view with: journalctl -u dmx-bridge -f
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=dmx-bridge
+
+[Install]
+WantedBy=multi-user.target

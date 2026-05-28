@@ -1,0 +1,17 @@
+{
+  "name": "dmx-tester-bridge",
+  "version": "1.0.0",
+  "description": "WebSocket → Art-Net/sACN bridge server for DMX Tester app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
+}
